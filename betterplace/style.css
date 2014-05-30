@@ -1,0 +1,30 @@
+#controls {
+  position: absolute;
+  top: 291px;
+  width: 305px; }
+
+#mapholder {
+  position: absolute;
+  width: 305px;
+  height: 300px; }
+
+#placeholder {
+  position: fixed;
+  top: 370px;
+  background-color: rgba(0, 200, 255, 0.7);
+  width: 305px;
+  height: 300px;
+  list-style-type: none;
+  padding-left: 0px;
+  overflow: scroll;
+  overflow-x: hidden; }
+
+#nameinput {
+  font-family: "Orator Std", sans-serif;
+  text-align: center;
+  font-size: 14px;
+  width: 300px;
+  top: -40px; }
+
+#buttons {
+  margin-left: 16px; }

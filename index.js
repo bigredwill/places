@@ -4,20 +4,22 @@
   var map;
   function initialize() {
     console.log("initialize");
-          var mapOptions = {
-          center: new google.maps.LatLng(currentLocation.coords.latitude,currentLocation.coords.longitude),
+        var mapOptions = {
+          center: new google.maps.LatLng(37.3356,121.8811),
           zoom: 8
         };
         map = new google.maps.Map($('mapholder'),
             mapOptions);
+        console.log("fuck");
     }
-      // google.maps.event.addDomListener(window, 'load', initialize);
+       google.maps.event.addDomListener(window, 'load', initialize);
 
   function load()
   {
     $result = $('#places');
     defaultValue = "Give your place a name";
-    getLocation();
+    // getLocation();
+    //  initialize();
     displayPlaces();
   }
 
@@ -78,7 +80,8 @@
         var locations = JSON.parse(localStorage.getItem("locations"));
         for (var i = locations.length - 1; i >= 0; i--) {
           var node = document.createElement('li');
-          node.innerHTML = locations[i].name + " " + locations[i].location;
+          node.prop('data-role', 'collapsible');
+          node.innerHTML = "<h1>"+locations[i].name +"</h1>" + "<p>" + locations[i].location + "</p>";
           result.appendChild(node);
           console.log(locations[i]);
         }
@@ -90,7 +93,7 @@
   {
     if(navigator.geolocation)
     {
-       navigator.geolocation.getCurrentPosition(showPosition,showError);
+       navigator.geolocation.getCurrentPosition(showPositionOnMap,showError);
     }
     else
     {
@@ -98,12 +101,12 @@
     }
   }
 
-  function showPosition(position)
+  function showPositionOnMap(position)
   {
-    currentLocation = position;
-    var latlon=position.coords.latitude+","+position.coords.longitude;
-    var img_url = "https://maps.googleapis.com/maps/api/staticmap?zoom=15&size=250x250&sensor=false&maptype=roadmap&markers=color:red|"+latlon;
-    // document.getElementById("mapholder").innerHTML = "<img href = '"+"' src= "+img_url+" >";
+
+    currentLocation = position; 
+    console.log(map);
+    map.setLocation(currentLocation.coords.latitude,currentLocation.coords.longitude);
     console.log(map);
   }
 
