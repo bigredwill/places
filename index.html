@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!-- Welcome to the header -->
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-  <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdR3bDIawkcfZr-mJWGBmoezr8DPqdjFg&sensor=true">
-    </script>
-	<!-- <link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'> -->
-	<link href='style.css' rel='stylesheet' type='text/css'>
+  <link href='style.css' rel='stylesheet' type='text/css'>
+  <!-- Import Scripts -->
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdR3bDIawkcfZr-mJWGBmoezr8DPqdjFg&sensor=true"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src = "index.js" type="text/javascript"></script>
-  <script src = "map.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.2/jquery.mobile.min.css"/>
+  <script src="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.2/jquery.mobile.min.js"></script>
+
 </head>
 
-<body onLoad = "load()">
-	<header>
-		Places
-	</header>
-    <div id = "mapholder"></div>
-	<input value = "Give your place a name" onFocus = "textBoxIn(this)" onBlur = "textBoxOut(this)" type = "text" name = "place" id = "input">
+<body>
+	<div id = "mapholder"></div>
+  <div id = "controls">
+    <input value = "Give your place a name" type = "text" id = "nameinput" >
+    <div id = "buttons" data-role = "controlgroup" data-type = "horizontal" >
+      <a class = "ui-btn" id = "addPlaceButton">add place</a>
+      <a class = "ui-btn"  id = "currentLocationButton">Current</a>
+      <a class = "ui-btn"  id = "clearLocalStorage">clear</a>
+    </div>
+    <div id = "addPlace">
+      <form>
 
- <!--  <a class = "button" id = "addButton" onClick = "addPlace()">+</a> -->
-	<button type = "button" onClick = "addPlace()" id = "addButton">+</button>
-
-  <button type = "button" onClick = "clearLocalStorage()" id = "clearButton">Clear</button>
-
-  <button type = "button" onClick = "getLocation()" id = "locationButton">Get Location</button>
-  <div id = "result">TODO: Change from static to js, adding places,markers on map</div>
-  <ul id = "places">places</ul>
+      </form>
+    </div>
+  </div>
+  <ul id = "placeholder"></ul>
 </body>
-
+  <script src = "map.js" type="text/javascript"></script>
 </html>
+
+
