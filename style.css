@@ -1,30 +1,52 @@
-#controls {
-  position: absolute;
-  top: 291px;
-  width: 305px; }
+/*
+Syntax error: Invalid CSS after "(max-width:": expected expression (e.g. 1px, bold), was ""
+        on line 51 of style.sass
 
-#mapholder {
-  position: absolute;
-  width: 305px;
-  height: 300px; }
+46: 	width: $width
+47: .place
+48: 	border-bottom: 1px solid black
+49: 	cursor: pointer
+50: 
+51: @media (max-width: 
+52: #nameinput
+53: 	@include text
+54: 	font-size: 14px
+55: 	width: $width
+56: 	top: -40px
 
-#placeholder {
-  position: fixed;
-  top: 370px;
-  background-color: rgba(0, 200, 255, 0.7);
-  width: 305px;
-  height: 300px;
-  list-style-type: none;
-  padding-left: 0px;
-  overflow: scroll;
-  overflow-x: hidden; }
-
-#nameinput {
-  font-family: "Orator Std", sans-serif;
-  text-align: center;
-  font-size: 14px;
-  width: 300px;
-  top: -40px; }
-
-#buttons {
-  margin-left: 16px; }
+Backtrace:
+style.sass:51
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/scss/parser.rb:1147:in `expected'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/script/lexer.rb:199:in `expected!'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/script/parser.rb:471:in `assert_expr'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/script/parser.rb:49:in `parse'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/scss/parser.rb:1022:in `sass_script'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/scss/parser.rb:410:in `media_expr'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/scss/parser.rb:387:in `media_query'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/scss/parser.rb:354:in `media_query_list'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/scss/parser.rb:50:in `parse_media_query_list'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/engine.rb:714:in `parse_directive'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/engine.rb:566:in `parse_line'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/engine.rb:471:in `build_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/engine.rb:490:in `block in append_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/engine.rb:489:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/engine.rb:489:in `append_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/engine.rb:345:in `_to_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/engine.rb:315:in `_render'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/engine.rb:262:in `render'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/plugin/compiler.rb:362:in `update_stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/plugin/compiler.rb:201:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/plugin/compiler.rb:283:in `block in watch'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/vendor/listen/lib/listen/multi_listener.rb:108:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/vendor/listen/lib/listen/multi_listener.rb:108:in `on_change'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/vendor/listen/lib/listen/multi_listener.rb:117:in `block in initialize_adapter'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/vendor/listen/lib/listen/adapters/polling.rb:56:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/vendor/listen/lib/listen/adapters/polling.rb:56:in `poll'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/vendor/listen/lib/listen/adapters/polling.rb:32:in `block in start'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"(max-width:\": expected expression (e.g. 1px, bold), was \"\"\A         on line 51 of style.sass\A \A 46: 	width: $width\A 47: .place\A 48: 	border-bottom: 1px solid black\A 49: 	cursor: pointer\A 50: \A 51: @media (max-width: \A 52: #nameinput\A 53: 	@include text\A 54: 	font-size: 14px\A 55: 	width: $width\A 56: 	top: -40px"; }

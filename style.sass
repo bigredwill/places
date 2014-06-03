@@ -18,31 +18,48 @@ $width: 550px
 	position: absolute
 	width: $width
 	height: 300px
+.btn
+	background-color: rgb(240,240,240)
+	display: block
+	position: relative
+	margin-left: - 15px
+	cursor: pointer
+	border: 2px solid grey
+	border-radius: 3px
 
 
 
 #placeholder
-	position: fixed
+	position: relative
 	top: 370px
-	background-color: rgba(0,200,255,.7)
+	// background-color: rgba(0,200,255,.7)
 	width: $width
 	height: 300px
+	margin-left: -($width/2)
+	left: 51%
 	list-style-type: none
 	padding-left: 0px
 	overflow: scroll
 	overflow-x: hidden
 
+#content
+	width: $width
+.place
+	border-bottom: 1px solid black
+	cursor: pointer
+
+@media (max-width: 
 #nameinput
 	@include text
 	font-size: 14px
-	width: $width - 5px
+	width: $width
 	top: -40px
 
 	
 #buttons
 	margin-left: 16px
 
-.ui-btn-inner { 
-  white-space: normal !important; 
-}
+#clearLocalStorage
+	position: fixed
+	top: 680px
 
